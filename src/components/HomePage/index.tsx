@@ -28,7 +28,7 @@ export function HomePage() {
 
           <div className="pt-[2.4rem] flex justify-center items-center gap-[2rem] tabletMD:gap-[4.4rem] tabletLG:justify-start ">
             <Link
-              href="https://api.whatsapp.com/send/?phone=5585986263325&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5585994127582&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0"
               className="bg-yellow-500 px-[1.3rem] py-[0.9rem] text-[1.5rem] rounded-[4px] text-nord-neutral-10 font-[600] tabletSM:text-[2rem] tabletSM:rounded-[9px] tabletMD:px-[2rem] border-[1px] border-transparent hover:bg-transparent hover:text-yellow-500 hover:border-[1px] hover:border-yellow-500 transition-all tabletLG:text-[1.8rem] laptopMD:text-[2.1rem] "
             >
               Entre em contato
