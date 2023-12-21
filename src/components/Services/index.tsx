@@ -15,7 +15,7 @@ export function Services() {
       <h3 className="text-[3.5rem] font-bold mb-[2.4rem] laptopSM:text-[6rem]">Serviços</h3>
 
       <div className="flex flex-col items-center justify-center tabletSM:flex-wrap tabletSM:flex-row tabletSM:gap-[10%] pt-[4rem]">
-        <div className="service" data-aos="fade-up" data-aos-duration="1000">
+        {/* <div className="service" data-aos="fade-up" data-aos-duration="1000">
           <Image className="img-service" src={cyberSecurity} alt="" />
 
           <div>
@@ -23,8 +23,8 @@ export function Services() {
             <p className="description">
               Protegendo seus serviços digitais com soluções avançadas para uma presença online segura.
             </p>
-          </div>
-        </div>
+          </div>""
+        </div> */}
 
         <div className="service" data-aos="fade-up" data-aos-duration="1000">
           <Image className="img-service" src={desing} alt="" />
