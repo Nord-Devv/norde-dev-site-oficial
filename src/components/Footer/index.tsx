@@ -67,7 +67,7 @@ export function Footer() {
             <BsGithub className="social" />
           </LinkNext>
           <LinkNext
-            href="https://api.whatsapp.com/send/?phone=5585986263325&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=5585994127582&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0"
             target="true"
           >
             <RiWhatsappFill className="social" />

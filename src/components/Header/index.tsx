@@ -69,7 +69,7 @@ export function Header() {
         </nav>
 
         <LinkNext
-          href="https://api.whatsapp.com/send/?phone=5585986263325&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0"
+          href="https://api.whatsapp.com/send/?phone=5585994127582&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0"
           target="true"
           className="hidden bg-yellow-500 text-black border-[1px] border-transparent px-[21px] py-[7px] rounded-[6px] text-[1.8rem] laptopMD:block hover:bg-transparent hover:text-yellow-500 hover:border-[1px] hover:border-yellow-500 transition-all
           links"
