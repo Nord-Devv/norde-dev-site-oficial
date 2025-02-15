@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none; 
+}
+
+ul{
+  list-style: none;
+}
+
+html{
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  @apply font-primary;
+  @apply bg-nord-neutral-10;
+  @apply font-[1.6rem];
+  @apply text-white;
+  @apply font-[500];
+}
+
+.slick-slide {
+  @apply w-[190px] flex justify-items-center; 
+}
+
+@layer components{
+  .social{
+    @apply text-[3.2rem] text-yellow-500 rounded-[50%] hover:text-yellow-800 hover:scale-110 transition-all
+  }
+}
+
+@layer components{
+  .service{
+    @apply flex flex-col items-center max-w-[320px] text-center mb-[5rem] laptopSM:max-w-[350px] laptopLG:max-w-[370px]
+  }
+
+  .img-service{
+    @apply max-w-[133px] mb-[2rem] laptopSM:max-w-[140px]
+  }
+
+  .title{
+    @apply text-[2.2rem] font-[600] mb-[1rem] laptopSM:text-[2.6rem]
+  }
+
+  .description{
+    @apply text-[1.5rem] laptopSM:text-[1.9rem]
+  }
+}
+
+@layer components{
+ .text-key{
+  @apply text-yellow-500
+ }
+
+ .img-teams{
+  @apply w-[50%] h-[50%] relative tabletMD:w-[33.33%] tabletMD:h-[33.33%] laptopSM:w-[25%] laptopSM:h-[25%]
+ }
+
+ .name{
+  @apply text-[1.6rem] tabletSM:text-[2.3rem] laptopLG:text-[2.6rem] laptopLG:font-bold
+ }
+
+ .office{
+  @apply text-[1.2rem] tabletSM:text-[1.5rem] laptopLG:text-[1.8rem]
+ }
+}
+
+@layer components{
+  .active{
+    @apply  py-[1.3rem] text-[1.7rem] transition-all laptopSM:py-[42px] border-b-yellow-500 border-b-4 text-yellow-500
+  }
+
+  .links{
+    @apply hover:text-white transition-all text-[1.7rem] cursor-pointer
+  }
+}
+
+
+.swiper-slide img {
+  @apply rounded-[0.5rem] tabletMD:w-[400px] laptopLG:w-full tabletMD:h-[300px] tabletMD:object-cover
+}
+
+.swiper {
+  @apply !flex !flex-col justify-center !max-w-full !mt-[4rem] !overflow-hidden !gap-[2rem]
+}
+  
+.swiper-pagination{
+  @apply bottom-0
+}
+
+.swiper-pagination-bullet{
+  @apply !bg-white !opacity-100;
+}
+
+.swiper-pagination{
+  @apply !relative
+}
+  
+.swiper-pagination-bullet-active {
+  @apply !bg-yellow-500;
+}
+
+
+ 
