@@ -31,7 +31,7 @@ body {
 }
 
 .slick-slide {
-  @apply w-[190px] flex justify-items-center; 
+  @apply w-[190px] flex justify-items-center items-center; 
 }
 
 @layer components{
