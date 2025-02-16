@@ -13,21 +13,20 @@ import 'slick-carousel/slick/slick-theme.css';
     const settings = {
         dots: false,
         infinite: true,
-        speed: 3000,
+        speed: 4000,
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        cssEase: "linear",
+        cssEase: "ease-in-out",
         autoplaySpeed: 70,
         arrows: false, 
         pauseOnHover: false,
         swipeToSlide: true,
-        variableWidth: true, 
     } 
     return (
-        <section className="w-full bg-bg-secundary py-[2rem] my-[3rem] flex items-center justify-center">
+        <section className="w-full bg-bg-secundary py-[2rem] my-[3rem] flex items-center justify-center border-b-2 border-nord-neutral-30">
         <Slider {...settings} className="max-w-[1000px] w-full flex justify-center">
-          <div className="flex items-center px-1 w-[120px]">
+          <div className="flex items-center w-[120px]">
             <Image src={empresa1} alt="Empresas" className="w-auto max-w-[500px] h-[100px]" />
           </div>
           <div className="flex items-center px-1 w-[120px]">
