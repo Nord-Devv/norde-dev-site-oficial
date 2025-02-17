@@ -5,6 +5,7 @@ interface ImageAboutProps {
   src: string;
   title: string;
   description: string;
+  children?: React.ReactNode;
 }
 
 export const ImageServicesDefault: React.FC<ImageAboutProps> = ({ src, title, description }) => {
