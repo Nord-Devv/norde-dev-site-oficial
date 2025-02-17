@@ -9,39 +9,52 @@ import empresa5 from "../../assets/empresa5.svg";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
- export const PartnerCompanies: React.FC = () => { 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 4000,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        cssEase: "ease-in-out",
-        autoplaySpeed: 70,
-        arrows: false, 
-        pauseOnHover: false,
-        swipeToSlide: true,
-    } 
-    return (
-        <section className="w-full bg-bg-secundary py-[2rem] my-[3rem] flex items-center justify-center border-b-2 border-nord-neutral-30">
+export const PartnerCompanies: React.FC = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 3500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: true,
+    cssEase: "ease-in-out",
+    autoplaySpeed: 100,
+    arrows: false,
+    pauseOnHover: false,
+    swipeToSlide: true,
+    responsive:[
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ], 
+  }
+  return (
+    <section className="w-full bg-bg-secundary py-[2rem] my-[3rem] flex items-center justify-center border-b-2 border-nord-neutral-30">
         <Slider {...settings} className="max-w-[1000px] w-full flex justify-center">
-          <div className="flex items-center w-[120px]">
-            <Image src={empresa1} alt="Empresas" className="w-auto max-w-[500px] h-[100px]" />
-          </div>
-          <div className="flex items-center px-1 w-[120px]">
-            <Image src={empresa2} alt="Empresas" className="w-auto max-w-[500px] h-[100px]" />
-          </div>
-          <div className="flex items-center px-1 w-[120px]">
-            <Image src={empresa3} alt="Empresas" className="w-auto max-w-[500px] h-[100px]" />
-          </div>
-          <div className="flex items-center px-1 w-[120px]">
-            <Image src={empresa4} alt="Empresas" className="w-auto max-w-[500px] h-[100px]" />
-          </div>
-          <div className="flex items-center px-1 w-[120px]">
-            <Image src={empresa5} alt="Empresas" className="w-auto max-w-[500px] h-[100px]" />
-          </div>
+          {[empresa1,empresa2, empresa3, empresa4, empresa5].map((empresa, index) => (
+               <div key={index} className="flex items-center w-[120px] md:w-[150px] lg:w-[180px]">
+               <Image src={empresa} alt="Empresas" className="w-auto max-w-xl h-[90px] md:h-[100px]" />
+             </div>
+          ))}
         </Slider>
-      </section>
-    )
+    </section>
+  )
 }
