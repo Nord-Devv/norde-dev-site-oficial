@@ -26,7 +26,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
 
-export function LandingPage() {
+export default function LandingPage() {
 
   useEffect(() => {
     Aos.init();
