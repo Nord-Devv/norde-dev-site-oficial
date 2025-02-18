@@ -15,10 +15,11 @@ import imgDesktop from "../../assets/home-desktop.png";
 import bgDesktop from "../../assets/Vector-5.png";
 import bgNotebook from "../../assets/Vector-3.png";
 import { ButtonDefault } from "../../components/ButtonDefault";
-import { ImageServicesDefault  }  from "../../components/ImageServicesDefault";
+import { ImageServicesDefault } from "../../components/ImageServicesDefault";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { PartnerCompanies } from "@/components/PartnerCompanies";
+import { Projects } from '@/components/Projects';
 
 
 import Aos from 'aos';
@@ -45,7 +46,7 @@ export default function LandingPage() {
         />
 
         <div className="max-w-[1440px] mx-auto text-center flex flex-col justify-center items-center tabletLG:flex tabletLG:items-center tabletLG:flex-row laptopSM:gap-[2.5rem] overflow-hidden">
-          <div className="w-[680px] min-w-[335px] max-w-full px-[16px] tabletLG:text-left" data-aos="fade-right"
+          <div className="w-[680px] min-w-[335px] max-w-full px-[5px] pr-[8px] tabletLG:text-left" data-aos="fade-right"
             data-aos-duration="1000">
             <h1 className="text-white text-[4.5rem] font-bold mb-[2.4rem] tabletSM:text-[6rem] tabletSM:max-w-[520px] tabletSM:mx-auto tabletMD:text-[6.5rem] tabletMD:max-w-[590px] tabletLG:text-[5.4rem] laptopSM:ml-0 laptopSM:max-w-full laptopSM:text-[5.6rem] laptopMD:text-[7rem] laptopLG:text-[7.1rem]">
               Bem-vindos a <span className="text-yellow-500">Nord Dev</span>
@@ -118,7 +119,7 @@ export default function LandingPage() {
             <p className="text-[1.4rem] tabletSM:text-[1.6rem] tabletMD:text-[1.6rem] tabletLG:text-[1.9rem] laptopMD:text-[2.1rem] laptopLG:text-[1.9rem]">
               Somos uma empresa de tecnologia com foco em criação de sites, visando solucionar a presença digital dos nossos clientes com excelência.
             </p>
-            <p className="text-[1.4rem] tabletSM:text-[1.6rem] tabletMD:text-[1.6rem] tabletLG:text-[1.9rem] laptopMD:text-[2.1rem] laptopLG:text-[1.9rem]">
+            <p className="text-[1.4rem] tabletSM:text-[1.6rem] tabletMD:text-[1.6rem] tabletLG:text-[1.8rem]  laptopMD:text-[2.1rem] laptopLG:text-[1.9rem]">
               Nossa equipe experiente combina criatividade e conhecimento técnico para desenvolver sites responsivos, intuitivos e visualmente atraentes, atendendo a empresa locais quanto a clientes de todo o país.
             </p>
           </div>
@@ -137,6 +138,10 @@ export default function LandingPage() {
           data-aos="fade-left"
           data-aos-duration="1000"
         />
+      </section>
+      {/* /// Sessão Empresas Parceiras */}
+      <section className="w-full py-[2rem] flex justify-center">
+        <PartnerCompanies />
       </section>
       {/* /// Sessão HomePage */}
       <section className="flex flex-col items-center justify-center my-[2.5rem] max-w-[1440px] mx-auto tabletSM:flex-wrap" id="servicos">
@@ -178,7 +183,6 @@ export default function LandingPage() {
           >
           </ImageServicesDefault>
 
-
           <ImageServicesDefault
             src={socialMedia}
             title="Social Media"
@@ -198,11 +202,6 @@ export default function LandingPage() {
             Solicitar orçamento
           </ButtonDefault>
         </div>
-      </section>
-      {/* /// Sessão Empresas Parceiras */}
-
-      <section className="w-full bg-bg-secundary py-[2rem] flex justify-center">
-        <PartnerCompanies/>
       </section>
       {/* <section className="w-full bg-bg-secundary py-[2rem] my-[3rem] flex justify-center">
         <Image className="max-w-[1200px] w-full px-[3rem]" src={empresas}  alt="" />

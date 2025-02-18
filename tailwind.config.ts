@@ -30,10 +30,11 @@ module.exports = {
       screens: {
         tabletSM: '600px',
         tabletMD: '768px',
-        tabletLG: '950PX',
+        tabletLG: '950px',
         laptopSM: '1070px',
-        laptopMD: '1200PX',
+        laptopMD: '1200px',
         laptopLG: '1440px',
+        mobileSM: '320px',
       },
       fontFamily: {
         primary: ['var(--font-poppins)'],

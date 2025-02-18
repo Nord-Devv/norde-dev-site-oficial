@@ -87,12 +87,13 @@ body {
 }
 
 
-.swiper-slide img {
-  @apply rounded-[0.5rem] tabletMD:w-[400px] laptopLG:w-full tabletMD:h-[300px] tabletMD:object-cover
+.swiper {
+  @apply !flex !flex-col justify-center items-center !max-w-full !mt-[4rem] !overflow-hidden !gap-[2rem]
 }
 
-.swiper {
-  @apply !flex !flex-col justify-center !max-w-full !mt-[4rem] !overflow-hidden !gap-[2rem]
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
 }
   
 .swiper-pagination{
@@ -110,6 +111,3 @@ body {
 .swiper-pagination-bullet-active {
   @apply !bg-yellow-500;
 }
-
-
- 

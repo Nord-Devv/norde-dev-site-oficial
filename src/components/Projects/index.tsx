@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectCoverflow } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -16,28 +16,22 @@ export function Projects() {
       <h3 className="text-[3.6rem] font-bold laptopSM:text-[6rem]">Projetos</h3>
 
       <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={2}
-          spaceBetween={0}
-          loop={true}
-          breakpoints={{
-            1000:{
-              slidesPerView: 3
-            }
-          }}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 50,
-            depth: 125,
-            modifier: 2,
-            slideShadows: true,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
-          className="mySwiper mt-[2.5rem]"
-        >
+        slidesPerView={2}
+        spaceBetween={20}
+        loop={true}
+        autoplay={{
+          delay: 0, 
+          disableOnInteraction: false,
+        }}
+        speed={5000} 
+        breakpoints={{
+          1000: {
+            slidesPerView: 3,
+          },
+        }}
+        modules={[Autoplay]}
+        className="mySwiper mt-[2.5rem]"
+      >
           <SwiperSlide>
             <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
           </SwiperSlide>
