@@ -22,7 +22,7 @@ export const PartnerCompanies: React.FC = () => {
           disableOnInteraction: false,
           pauseOnMouseEnter:false,
         }}
-        speed={1650}
+        speed={4650}
         breakpoints={{
           1024: {slidesPerView: 4,},
           768: {slidesPerView: 3,},
