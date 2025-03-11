@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-
 export function Projects() {
   return (
     <section className="max-w-[1440px]  mx-auto flex flex-col items-center laptopLG:py-[6rem]" id="projetos">
@@ -17,7 +16,7 @@ export function Projects() {
 
       <Swiper
         slidesPerView={2}
-        spaceBetween={20}
+        spaceBetween={15}
         loop={true}
         autoplay={{
           delay: 0, 
@@ -32,7 +31,7 @@ export function Projects() {
         modules={[Autoplay]}
         className="mySwiper mt-[2.5rem]"
       >
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slider">
             <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
           </SwiperSlide>
           <SwiperSlide>
