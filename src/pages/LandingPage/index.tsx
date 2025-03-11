@@ -19,6 +19,10 @@ import { ImageServicesDefault } from "../../components/ImageServicesDefault";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { PartnerCompanies } from "@/components/PartnerCompanies";
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 export default function LandingPage() {
 
   useEffect(() => {
