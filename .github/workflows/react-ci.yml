@@ -3,7 +3,7 @@ name: Push to Another Repository
 on:
   push:
     branches:
-      - main  # Trigger on push to the main branch
+      - feat/component  # Trigger on push to the main branch
 
 jobs:
   push-to-another-repo:
@@ -72,4 +72,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Automated update from source repo"
-          git push origin main --force  # Force push to the target branch
+          git push origin feat/component --force  # Force push to the target branch
