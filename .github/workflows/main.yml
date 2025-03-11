@@ -1,0 +1,75 @@
+name: Push to Another Repository
+
+on:
+  push:
+    branches:
+      - feat/component  # Trigger on push to the main branch
+
+jobs:
+  push-to-another-repo:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the source repository
+      - name: Checkout source repo
+        uses: actions/checkout@v3
+
+      # Debug TARGET_REPO_TOKEN
+      - name: Debug TARGET_REPO_TOKEN
+        run: |
+          if [ -z "${{ secrets.TARGET_REPO_TOKEN }}" ]; then
+            echo "TARGET_REPO_TOKEN is not set or is empty"
+          else
+            echo "TARGET_REPO_TOKEN is set"
+          fi
+
+      # Checkout the target repository
+      - name: Checkout target repo
+        uses: actions/checkout@v3
+        with:
+          repository: RankracerBR/Nord-Dev-Site  # Replace with the target repo
+          token: ${{ secrets.TARGET_REPO_TOKEN }}  # Ensure this matches the secret name
+          path: target-repo
+
+      # Debug repository access
+      - name: Debug repository access
+        run: |
+          cd target-repo
+          git remote -v
+          git fetch origin
+
+      # Clear the target repository (optional, to avoid conflicts)
+      - name: Clear target repo
+        run: |
+          cd target-repo
+          git rm -rf .  # Remove all files in the target repo
+          git clean -fd # Clean untracked files and directories
+
+      # Copy all files from the source repo to the target repo (excluding target-repo)
+      - name: Copy all files to target repo
+        run: |
+          rsync -av --exclude='target-repo' ./* ./target-repo/  # Copy all files except the target-repo directory
+          cd target-repo
+
+      # Debug source and target directories
+      - name: Debug source and target directories
+        run: |
+          echo "Source directory contents:"
+          ls -R .
+          echo "Target directory contents:"
+          ls -R ./target-repo
+
+      # Check Git status
+      - name: Check Git status
+        run: |
+          cd target-repo
+          git status
+
+      # Commit and push changes to the target repository
+      - name: Commit and push to target repo
+        run: |
+          cd target-repo
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated update from source repo"
+          git push origin feat/component --force  # Force push to the target branch
