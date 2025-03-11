@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   icons: '/favicon/favicon.ico',
   description: 'Desenvolvimento web inovador para impulsionar o seu sucesso online. Conecte-se, inspire-se, evolua - somos a sua parceira no mundo digita'
 }
- 
+
 export default function RootLayout({children}: {
 children: React.ReactNode
 }) {

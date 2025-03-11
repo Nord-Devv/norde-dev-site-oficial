@@ -10,23 +10,19 @@ import bgAboutMobile from "../../assets/bg-about-mobile.png";
 import imageAbout from "../../assets/bg-image-about.png";
 import bgAboutDesktop from "../../assets/bg-about-desktop.png";
 import imageAboutDesktop from "../../assets/image-about-desktop.png";
-import member from "../../assets/member.png";
 import imgDesktop from "../../assets/home-desktop.png";
 import bgDesktop from "../../assets/Vector-5.png";
 import bgNotebook from "../../assets/Vector-3.png";
+
 import { ButtonDefault } from "../../components/ButtonDefault";
 import { ImageServicesDefault } from "../../components/ImageServicesDefault";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { PartnerCompanies } from "@/components/PartnerCompanies";
-import { Projects } from '@/components/Projects';
-
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
-
-
 export default function LandingPage() {
 
   useEffect(() => {
@@ -37,11 +33,10 @@ export default function LandingPage() {
 
     <>
       <Header />
-      {/* /// Sessão HomePage */}
       <section id="inicio" className="py-[4rem] tabletLG:py-[15rem]">
         <Image
           src={bgDesktop}
-          className="hidden tabletLG:block tabletLG:absolute tabletLG:bottom-[-15rem] tabletLG:left-0"
+          className="absolute top-10 z-[-10] tabletLG:block tabletLG:top-auto tabletLG:bottom-[-15rem] tabletLG:left-0"
           alt=""
         />
 
@@ -56,16 +51,10 @@ export default function LandingPage() {
             </p>
 
             <div className="pt-[2.4rem] flex justify-center items-center gap-[2rem] tabletMD:gap-[4.4rem] tabletLG:justify-start ">
-              <ButtonDefault className="hidden bg-yellow-500 text-black border-[1px] border-transparent px-[21px] py-[8px] rounded-[6px] text-[1.8rem] laptopMD:block hover:bg-transparent hover:text-yellow-500 hover:border-[1px] hover:border-yellow-500 transition-all
-    links" target="https://api.whatsapp.com/send/?phone=5585994127582&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0">
+              <ButtonDefault className="bg-yellow-500 px-[1.3rem] py-[0.9rem] text-[1.5rem] rounded-[4px] text-nord-neutral-10 font-[600] tabletSM:text-[2rem] tabletSM:rounded-[9px] tabletMD:px-[2rem] border-[1px] border-transparent hover:bg-transparent hover:text-yellow-500 hover:border-[1px] hover:border-yellow-500 transition-all tabletLG:text-[1.8rem] laptopMD:text-[2.1rem]"
+                target="https://api.whatsapp.com/send/?phone=5585994127582&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0">
                 Entre em Contato
               </ButtonDefault>
-              {/* <Link
-          href="#"
-          className="border-[0.05rem] rounded-[4px] px-[2.2rem] py-[0.9rem] text-[1.3rem] font-[600] tabletSM:text-[2rem] tabletSM:rounded-[9px]  hover:bg-transparent hover:text-yellow-500 hover:border-[1px] hover:border-yellow-500 transition-all tabletLG:text-[1.8rem] laptopMD:text-[2.1rem]"
-        >
-          Nossos projetos
-        </Link> */}
             </div>
           </div>
 
@@ -80,12 +69,12 @@ export default function LandingPage() {
 
         <Image
           src={bgNotebook}
-          className="hidden tabletLG:absolute tabletLG:bottom-[10rem] tabletLG:right-0 tabletLG:z-[-1] tabletLG:block"
+          className="absolute right-0 bottom-[-20rem] z-[-10] tabletLG:bottom-[10rem] tabletLG:right-0 tabletLG:z-[-1] tabletLG:block"
           alt=""
         />
       </section>
 
-      {/* // Sessão About */}
+      
       <section className="max-w-[2000px] relative flex flex-col tabletLG:flex-row tabletLG:justify-center laptopSM:mx-auto laptopSM:items-center overflow-hidden" id="quem-somos">
         <div className="h-[460px] flex items-center border-t-[1rem] border-yellow-500 w-full justify-center laptopSM:relative tabletLG:border-l-[1.3rem] tabletMD:h-[480px] tabletLG:border-t-0 tabletLG:h-[500px] laptopLG:h-[633px] tabletLG:max-w-full tabletLG:justify-normal"
           data-aos="fade-down"
@@ -111,7 +100,7 @@ export default function LandingPage() {
 
             <p className="text-[1.5rem] font-[600] tabletSM:text-[1.9rem] tabletMD:text-[2.5rem] laptopMD:text-[3rem] laptopLG:text-[3.9rem]">
               Criando e melhorando sistemas com{" "}
-              <span className="text-key">TECNOLOGIA</span>,
+              <span className="text-key">TECNOLOGIA</span>, {" "}
               <span className="text-key">INOVAÇÃO</span> &{" "}
               <span className="text-key">SEGURANÇA</span>
             </p>
@@ -143,7 +132,7 @@ export default function LandingPage() {
       <section className="w-full py-[2rem] flex justify-center">
         <PartnerCompanies />
       </section>
-      {/* /// Sessão HomePage */}
+      
       <section className="flex flex-col items-center justify-center my-[2.5rem] max-w-[1440px] mx-auto tabletSM:flex-wrap" id="servicos">
         <h1 className="before:bg-white before:w-[4.5rem] before:h-[1px] after:bg-white after:w-[4.5rem] after:h-[1px] flex justify-center items-center gap-[1.5rem] font-[200] text-[3.4rem] laptopSM:text-[5.9rem]">
           Nossos
@@ -151,16 +140,6 @@ export default function LandingPage() {
         <h3 className="text-[3.5rem] font-bold mb-[2.4rem] laptopSM:text-[6rem]">Serviços</h3>
 
         <div className="flex flex-col items-center justify-center tabletSM:flex-wrap tabletSM:flex-row tabletSM:gap-[10%] pt-[4rem]">
-          {/* <div className="service" data-aos="fade-up" data-aos-duration="1000">
-      <Image className="img-service" src={cyberSecurity} alt="" />
-
-      <div>
-        <h3 className="title">Cyber Security</h3>
-        <p className="description">
-          Protegendo seus serviços digitais com soluções avançadas para uma presença online segura.
-        </p>
-      </div>""
-    </div> */}
 
           <ImageServicesDefault
             src={design}
@@ -192,93 +171,17 @@ export default function LandingPage() {
 
         </div>
       </section>
-      {/* /// Sessão HomePage */}
+     
       <section className="flex items-center justify-center relative w-full bg-bg-request bg-cover bg-no-repeat bg-center">
         <div className="text-center px-[3.5rem] py-[100px] max-w-[1330px] flex flex-col items-center justify-center">
           <h3 className="before:bg-white before:w-[3rem] before:h-[1px] after:bg-white after:w-[3rem] after:h-[1px] flex justify-center items-center gap-[1.5rem] text-[1.3rem] mb-[2rem] font-[300] tabletSM:text-[2rem] tabletMD:text-[2.5rem] laptopLG:text-[4rem]" data-aos="fade-down" data-aos-duration="1000">Vamos solicitar o seu orçamento</h3>
           <h2 className="text-[3.6rem] font-[700] pb-[5rem] tabletSM:text-[5rem] tabletSM:px-[6rem] tabletMD:px-[3rem] laptopSM:text-[7rem]" data-aos="fade-down" data-aos-duration="1000">E garantir o <span className="text-yellow-500">sucesso da sua empresa</span> no mundo digital</h2>
 
-          <ButtonDefault className="hidden bg-yellow-500 text-black border-[1px] border-transparent px-[41px] py-[16px] rounded-[6px] text-[1.8rem] laptopMD:block hover:bg-transparent hover:text-yellow-500 hover:border-[1px] hover:border-yellow-500 transition-all" target="https://api.whatsapp.com/send/?phone=5585994127582&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0">
+          <ButtonDefault className="text-[1.4rem] text-black bg-yellow-500 px-[1.9rem] py-[1rem] rounded-[5px] font-[600] tabletSM:text-[2rem] tabletMD:text-[2.3rem] laptopLG:text-[2.7rem] laptopLG:px-[3.5rem] border-[1px] border-transparent hover:bg-transparent hover:text-yellow-500 hover:border-[1px] hover:border-yellow-500 transition-all" target="https://api.whatsapp.com/send/?phone=5585994127582&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0">
             Solicitar orçamento
           </ButtonDefault>
         </div>
       </section>
-      {/* <section className="w-full bg-bg-secundary py-[2rem] my-[3rem] flex justify-center">
-        <Image className="max-w-[1200px] w-full px-[3rem]" src={empresas}  alt="" />
-      </section> */}
-
-      {/* <section className="max-w-[1920px] mx-auto text-center py-[4rem]">
-        <h2 className="before:bg-white before:w-[3rem] before:h-[1px] after:bg-white after:w-[3rem] after:h-[1px] text-[3.8rem] text-center flex justify-center items-center gap-[1.9rem] laptopSM:text-[6rem]">
-          Nossa
-        </h2>
-        <h3 className="text-[3.8rem] font-bold laptopSM:text-[6rem]">Equipe</h3>
-
-        <div className=" flex justify-center flex-wrap text-start pt-[3rem]">
-          <div className="img-teams">
-            <Image className="w-full" src={member} alt="" />
-            <div className="absolute bottom-[1.5rem] left-[1rem]">
-              <h3 className="name">Emanuel Fortes</h3>
-              <p className="office">CEO e Desenvolvedor Front-End</p>
-            </div>
-          </div>
-
-          <div className="img-teams">
-            <Image className="w-full" src={member} alt="" />
-            <div className="absolute bottom-[1.5rem] left-[1rem]">
-              <h3 className="name">Gabriel S.s</h3>
-              <p className="office">Desenvolvedor PL</p>
-            </div>
-          </div>
-
-          <div className="img-teams">
-            <Image className="w-full" src={member} alt="" />
-            <div className="absolute bottom-[1.5rem] left-[1rem]">
-              <h3 className="name">Daniel Moreno</h3>
-              <p className="office">Desenvolvedor PL</p>
-            </div>
-          </div>
-
-          <div className="img-teams">
-            <Image className="w-full" src={member} alt="" />
-            <div className="absolute bottom-[1.5rem] left-[1rem]">
-              <h3 className="name">Matheus Macedo</h3>
-              <p className="office">Desenvolvedor PL</p>
-            </div>
-          </div>
-
-          <div className="img-teams">
-            <Image className="w-full" src={member} alt="" />
-            <div className="absolute bottom-[1.5rem] left-[1rem]">
-              <h3 className="name">Augusto Pontes</h3>
-              <p className="office">Desenvolvedor PL</p>
-            </div>
-          </div>
-
-          <div className="img-teams">
-            <Image className="w-full" src={member} alt="" />
-            <div className="absolute bottom-[1.5rem] left-[1rem]">
-              <h3 className="name">Emanuel Fortes</h3>
-              <p className="office">CEO e Desenvolvedor Front-End</p>
-            </div>
-          </div>
-
-          <div className="img-teams">
-            <Image className="w-full" src={member} alt="" />
-            <div className="absolute bottom-[1.5rem] left-[1rem]">
-              <h3 className="name">Emanuel Fortes</h3>
-              <p className="office">Desenvolvedor PL</p>
-            </div>
-          </div>
-
-          <div className="img-teams">
-            <Image className="w-full" src={member} alt="" />
-            <div className="absolute bottom-[1.5rem] left-[1rem]">
-              <h3 className="name">Lais Cristine</h3>
-              <p className="office">UI/UX Designer</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <Footer />
     </>
   )

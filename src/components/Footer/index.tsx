@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
-import { RiWhatsappFill } from "react-icons/ri";
+import { BsWhatsapp } from "react-icons/bs";
 
 import logoFooter from "../../assets/logo-footer.png";
 import logoDesktop from "../../assets/logo.png";
@@ -25,7 +25,7 @@ export function Footer() {
         </LinkNext>
         <nav>
           <ul className="text-[1.8rem] font-[600] leading-[3.3rem] flex flex-col justify-around gap-[1.6rem] tabletMD:flex-row tabletMD:gap-[3.5rem] laptopSM:gap-[5rem]">
-            <li>
+            <li className="cursor-pointer text-white-400 links">
               <Link
                 to="quem-somos"
                 spy={true}
@@ -36,10 +36,8 @@ export function Footer() {
                 Quem somos
               </Link>
             </li>
-            {/* <li>
-              <Link href={"#projetos"}>Nossos projetos</Link>
-            </li> */}
-            <li>
+        
+            <li className="cursor-pointer text-white-400 links">
               <Link
                 to="inicio"
                 spy={true}
@@ -70,7 +68,7 @@ export function Footer() {
             href="https://api.whatsapp.com/send/?phone=5585992004530&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0"
             target="true"
           >
-            <RiWhatsappFill className="social" />
+            <BsWhatsapp className="social" />
           </LinkNext>
         </div>
       </div>

@@ -28,13 +28,13 @@ module.exports = {
         "full": '100%',
       },
       screens: {
+        mobileSM: '320px',
         tabletSM: '600px',
         tabletMD: '768px',
         tabletLG: '950px',
         laptopSM: '1070px',
         laptopMD: '1200px',
         laptopLG: '1440px',
-        mobileSM: '320px',
       },
       fontFamily: {
         primary: ['var(--font-poppins)'],

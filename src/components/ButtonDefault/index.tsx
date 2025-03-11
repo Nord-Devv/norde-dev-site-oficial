@@ -1,11 +1,9 @@
 import LinkNext from "next/link";
-
 interface ButtonDefaultProps {
   children: React.ReactNode;
   target: string,
   className: string,
 }
-
 export function ButtonDefault({ children, target, className }: ButtonDefaultProps) {
   return (
     <LinkNext
@@ -14,7 +12,6 @@ export function ButtonDefault({ children, target, className }: ButtonDefaultProp
       className={`${className}`}
     >
       {children}
-  
     </LinkNext>
   )
 
