@@ -3,7 +3,7 @@ name: Push to Another Repository
 on:
   push:
     branches:
-      - feat/component  # Trigger on push to the main branch
+      - main  # Trigger on push to the main branch
 
 jobs:
   push-to-another-repo:
