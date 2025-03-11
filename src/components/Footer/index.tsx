@@ -36,9 +36,7 @@ export function Footer() {
                 Quem somos
               </Link>
             </li>
-            {/* <li>
-              <Link href={"#projetos"}>Nossos projetos</Link>
-            </li> */}
+        
             <li className="cursor-pointer text-white-400 links">
               <Link
                 to="inicio"

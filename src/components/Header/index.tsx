@@ -46,14 +46,6 @@ export function Header() {
                 Quem somos?
               </Link>
             </li>
-            {/* <li className={menuActive == "projetos" ? "active" : "links"}>
-              <Link
-                onClick={() => setMenuActive("projetos")}
-                href={"#projetos"}
-              >
-                Projetos
-              </Link>
-            </li> */}
             <li >
               <Link
                 className="links"
@@ -70,7 +62,7 @@ export function Header() {
         </nav>
 
         <ButtonDefault className="hidden bg-yellow-500 text-black border-[1px] border-transparent px-[21px] py-[7px] rounded-[6px] text-[1.8rem] laptopMD:block hover:bg-transparent hover:text-yellow-500 hover:border-[1px] hover:border-yellow-500 transition-all
-    links" target="https://api.whatsapp.com/send/?phone=558592004530&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0" >
+    links" target="https://api.whatsapp.com/send/?phone=5585994127582&text=Quero+ser+NORDDEV!&type=phone_number&app_absent=0" >
           Solicite um orçamento
         </ButtonDefault>
       </div>

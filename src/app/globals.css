@@ -86,14 +86,8 @@ body {
   }
 }
 
-
 .swiper {
   @apply !flex !flex-col justify-center items-center !max-w-full !mt-[4rem] !overflow-hidden !gap-[2rem]
-}
-
-
-.swiper-slider img  {
-
 }
 
 .swiper-wrapper {
